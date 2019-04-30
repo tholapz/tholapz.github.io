@@ -1,5 +1,6 @@
 ---
-published: false
+published: true
+layout: post
 ---
 ## Modifying the behavior of Promise.all()
 
