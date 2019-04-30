@@ -4,7 +4,6 @@ title: Project: Leap Pottery
 ---
 
 [Leap Motion Pottery](http://tholapz.github.io/leappottery/)
-==========================
 
 ![alt text](http://tholapz.github.io/leappottery/images/leappottery.png)
 
