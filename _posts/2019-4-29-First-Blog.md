@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First Blog
-published: false
+published: true
 ---
 
 Hello! This is my first blog.
