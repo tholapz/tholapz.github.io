@@ -3,7 +3,8 @@ layout: post
 title: Project: Leap Pottery
 ---
 
-## Leap Pottery
+Leap Pottery
+
 [Link to the project's source code](http://tholapz.github.io/leappottery/)
 
 ![alt text](http://tholapz.github.io/leappottery/images/leappottery.png)
