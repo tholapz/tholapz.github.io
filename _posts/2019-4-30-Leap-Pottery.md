@@ -19,10 +19,8 @@ the result will show on the right pane. To draw a new shape, click "Refresh Page
 
 ### 3rd party libraries
 ThreeJS boilerplate
-```
 http://learningthreejs.com/blog/2011/12/20/boilerplate-for-three-js/
-```
+
 Leap Motion SDK
-```
 https://developer.leapmotion.com
-```
+
