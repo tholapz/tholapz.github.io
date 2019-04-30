@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I make development plans and technical design for software projects that are used by many people around the world. In my spare time, I help people learn how to code. I also attend hackathon events in either LA or Bay Area from time to time. My guilty pleasures are sci-fi novels (Neuromancer, Ready Player One, Dark Matter, among other titles) and podcasts.
+I help create several web applications which are used by hundreds of thousands of users world wide. I graduated from University of Southern California in 2013 with the Master's degree in Computer Science. In my spare time, I attend hackathon events in either LA or Bay Area. Apart from that, I read about Startup and History.
 
 ### Recommendations
 [James Lin](https://www.linkedin.com/in/james-lin-1120113), Front-end Lead Developer at Telescope.tv:
