@@ -1,10 +1,29 @@
 ---
 layout: post
-title: You're up and running!
+title: Project: Leap Pottery
 ---
+[Leap Motion Pottery](http://tholapz.github.io/leappottery/)
+==========================
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+![alt text](http://tholapz.github.io/leappottery/images/leappottery.png)
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+Leap Motion Vasefication is a simple modeling tool written in JavaScript. We support Leap Motion device as well as mouse interface. We use ThreeJS to abstract the web browser 3D rendering
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+instruction
+-----------
+draw a curve line on the left pane using one of the following methods:
+	1. Click and hold mouse to create a curve line
+	2. Press and hold "L" and draw a curve line from your finger (leap motion device required)
+
+the result will show on the right pane. To draw a new shape, click "Refresh Page"
+
+3rd party libraries
+-------------------
+ThreeJS boilerplate
+```
+http://learningthreejs.com/blog/2011/12/20/boilerplate-for-three-js/
+```
+Leap Motion SDK
+```
+https://developer.leapmotion.com
+```
