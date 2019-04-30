@@ -2,6 +2,7 @@
 layout: post
 title: Project: Leap Pottery
 ---
+
 [Leap Motion Pottery](http://tholapz.github.io/leappottery/)
 ==========================
 
