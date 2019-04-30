@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project: Leap Pottery
+title: Leap Pottery
 ---
 
 Leap Pottery
