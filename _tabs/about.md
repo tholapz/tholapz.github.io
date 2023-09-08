@@ -10,4 +10,5 @@ order: 4
 
 ### Contact me
 
-[kamal.zhang.555@gmail.com](mailto:kamal.zhang.555@gmail.com)
+https://www.linkedin.com/in/kamol-treewatchararat-a0071812
+
