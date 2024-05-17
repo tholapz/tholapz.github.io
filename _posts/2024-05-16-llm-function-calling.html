@@ -3,7 +3,6 @@ layout: notebook
 title: Integrating LLM Function Calling
 published: true
 ---
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7488,7 +7487,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Integrating-LLM-Function-Calling:-A-New-Frontier-in-App-Development">Integrating LLM Function Calling: A New Frontier in App Development<a class="anchor-link" href="#Integrating-LLM-Function-Calling:-A-New-Frontier-in-App-Development">¶</a></h1>
+<h1 id="Integrate-LLM-Function-Calling-to-your-API-Service---A-Practical-Guide">Integrate LLM Function Calling to your API Service - A Practical Guide<a class="anchor-link" href="#Integrate-LLM-Function-Calling-to-your-API-Service---A-Practical-Guide">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7579,6 +7578,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b7d118d1-7b4a-4b85-8c9d-8c257daf6d57">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="The-Problem">The Problem<a class="anchor-link" href="#The-Problem">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c1bd1165-bd67-4523-8379-847143001fcd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7596,242 +7606,366 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="API-Endpoint:-/api/updateUserProfile">API Endpoint: /api/updateUserProfile<a class="anchor-link" href="#API-Endpoint:-/api/updateUserProfile">¶</a></h2><h3 id="Method:-POST">Method: POST<a class="anchor-link" href="#Method:-POST">¶</a></h3><h3 id="Description:">Description:<a class="anchor-link" href="#Description:">¶</a></h3><p>This endpoint updates the user's profile with a wide range of attributes.</p>
-<h3 id="Request-Body-(JSON):">Request Body (JSON):<a class="anchor-link" href="#Request-Body-(JSON):">¶</a></h3>
-</div>
-</div>
-</div>
-</div>{
-  "userId": 1,
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john.doe@example.com",
-  "phoneNumber": "+1234567890",
-  "addressLine1": "123 Main St",
-  "addressLine2": "Apt 4B",
-  "city": "Metropolis",
-  "state": "NY",
-  "zipCode": "10001",
-  "country": "USA",
-  "dateOfBirth": "1990-01-01",
-  "gender": "Male",
-  "profilePictureUrl": "http://example.com/profile.jpg",
-  "bio": "Software developer and tech enthusiast.",
-  "website": "http://johndoe.com",
-  "twitterHandle": "@john_doe",
-  "linkedinProfile": "http://linkedin.com/in/johndoe",
-  "githubProfile": "http://github.com/johndoe",
-  "facebookProfile": "http://facebook.com/johndoe",
-  "instagramHandle": "@johndoe",
-  "occupation": "Software Developer",
-  "company": "Tech Corp",
-  "skills": ["Python", "JavaScript", "React"],
-  "hobbies": ["Cycling", "Reading", "Traveling"],
-  "language": "English",
-  "timezone": "America/New_York",
-  "notificationPreferences": {
-    "email": true,
-    "sms": false,
-    "push": true
-  },
-  "subscriptionStatus": "Active",
-  "accountType": "Premium",
-  "membershipLevel": "Gold",
-  "pointsBalance": 1500,
-  "lastLogin": "2024-05-01T12:00:00Z",
-  "accountCreated": "2015-06-15T08:00:00Z",
-  "emailVerified": true,
-  "phoneVerified": true,
-  "twoFactorAuthEnabled": false,
-  "preferredLanguage": "en",
-  "marketingOptIn": true,
-  "darkModeEnabled": false,
-  "sessionTimeout": 30,
-  "privacySettings": {
-    "profileVisibility": "Public",
-    "searchEngineIndexing": true
-  },
-  "favoriteCategories": ["Technology", "Science", "Art"],
-  "recentActivities": ["Logged in", "Updated profile", "Posted a comment"],
-  "theme": "Light",
-  "fontSize": "Medium",
-  "backupEmail": "backup@example.com",
-  "alternatePhone": "+1098765432",
-  "emergencyContact": {
-    "name": "Jane Doe",
-    "relation": "Sister",
-    "phone": "+1987654321"
-  },
-  "addressHistory": [
-    {
-      "address": "456 Old St",
-      "city": "Gotham",
-      "state": "NJ",
-      "zipCode": "07001",
-      "country": "USA"
-    },
-    {
-      "address": "789 New Ave",
-      "city": "Star City",
-      "state": "CA",
-      "zipCode": "90001",
-      "country": "USA"
-    }
-  ],
-  "preferredContactMethod": "Email",
-  "communicationPreferences": {
-    "newsletter": true,
-    "promotions": false,
-    "updates": true
-  },
-  "profileCompletion": 85,
-  "lastPasswordChange": "2024-03-20T10:00:00Z",
-  "trustedDevices": ["iPhone", "MacBook"],
-  "securityQuestions": [
-    {
-      "question": "What is your mother's maiden name?",
-      "answer": "Smith"
-    },
-    {
-      "question": "What was your first pet's name?",
-      "answer": "Buddy"
-    }
-  ],
-  "recentOrders": [
-    {
-      "orderId": 12345,
-      "orderDate": "2024-04-10",
-      "status": "Delivered"
-    },
-    {
-      "orderId": 67890,
-      "orderDate": "2024-04-20",
-      "status": "Shipped"
-    }
-  ],
-  "wishList": ["Book 1", "Gadget 2", "Clothing Item 3"],
-  "cartItems": [
-    {
-      "itemId": 111,
-      "itemName": "Laptop",
-      "quantity": 1,
-      "price": 999.99
-    },
-    {
-      "itemId": 222,
-      "itemName": "Headphones",
-      "quantity": 2,
-      "price": 199.99
-    }
-  ],
-  "subscriptionRenewalDate": "2025-06-15",
-  "preferredPaymentMethod": "Credit Card",
-  "paymentMethods": [
-    {
-      "type": "Credit Card",
-      "last4": "1234",
-      "expiryDate": "2026-01"
-    },
-    {
-      "type": "PayPal",
-      "email": "paypal@example.com"
-    }
-  ],
-  "billingAddress": {
-    "addressLine1": "123 Billing St",
-    "addressLine2": "Suite 500",
-    "city": "Finance City",
-    "state": "TX",
-    "zipCode": "75001",
-    "country": "USA"
-  },
-  "shippingAddress": {
-    "addressLine1": "456 Shipping Ave",
-    "addressLine2": "Warehouse 7",
-    "city": "Logistics Town",
-    "state": "FL",
-    "zipCode": "33001",
-    "country": "USA"
-  },
-  "orderHistory": [
-    {
-      "orderId": 34567,
-      "orderDate": "2023-12-25",
-      "items": [
-        {
-          "itemId": 333,
-          "itemName": "Tablet",
-          "quantity": 1,
-          "price": 499.99
-        }
-      ],
-      "totalAmount": 499.99,
-      "status": "Delivered"
-    }
-  ],
-  "subscriptionPlans": ["Basic", "Premium", "Enterprise"],
-  "discountCodes": ["WELCOME10", "SPRINGSALE"],
-  "giftCards": [
-    {
-      "code": "GIFT2024",
-      "balance": 50.00
-    }
-  ],
-  "loyaltyProgram": {
-    "memberId": "LP123456",
-    "status": "Gold",
-    "points": 1500
-  },
-  "appVersion": "1.2.3",
-  "deviceInfo": {
-    "deviceType": "Smartphone",
-    "os": "iOS",
-    "osVersion": "14.4"
-  },
-  "supportTickets": [
-    {
-      "ticketId": 7890,
-      "issue": "Login issue",
-      "status": "Resolved"
-    }
-  ],
-  "favorites": ["Item 1", "Item 2", "Item 3"],
-  "savedSearches": ["Search 1", "Search 2"],
-  "preferredDeliveryTime": "Morning",
-  "deliveryInstructions": "Leave at the front door",
-  "surveyResponses": [
-    {
-      "surveyId": 101,
-      "answers": [5, 4, 3]
-    }
-  ],
-  "feedback": "Great service!",
-  "productReviews": [
-    {
-      "productId": 2222,
-      "review": "Excellent product!",
-      "rating": 5
-    }
-  ],
-  "browserHistory": ["Page 1", "Page 2"],
-  "notifications": [
-    {
-      "type": "Message",
-      "content": "You have a new message",
-      "timestamp": "2024-05-15T14:00:00Z"
-    }
-  ],
-  "location": {
-    "latitude": 40.7128,
-    "longitude": -74.0060
-  },
-  "activityLog": [
-    "Logged in",
-    "Updated profile",
-    "Changed password"
-  ]
-}
+<h3 id="URL">URL<a class="anchor-link" href="#URL">¶</a></h3><p><code>POST /api/submit_user_info</code></p>
+<h3 id="Description">Description<a class="anchor-link" href="#Description">¶</a></h3><p>This endpoint accepts a JSON object containing user information collected from a form.</p>
+<h3 id="Request-Format">Request Format<a class="anchor-link" href="#Request-Format">¶</a></h3><p>The request must be sent as a JSON object in the body of the POST request.</p>
+<h3 id="Request-Headers">Request Headers<a class="anchor-link" href="#Request-Headers">¶</a></h3><ul>
+<li><code>Content-Type: application/json</code></li>
+</ul>
+<h3 id="Request-Body">Request Body<a class="anchor-link" href="#Request-Body">¶</a></h3><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Password"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Age"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Zip Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Date of Birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Education"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Interests"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Username"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Website"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Favorite Color"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Subscribe to Newsletter"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Agree to Terms"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<span class="p">}</span>
+</pre></div>
+<h3 id="Parameters">Parameters<a class="anchor-link" href="#Parameters">¶</a></h3><ul>
+<li><strong>Name</strong>: (string) The full name of the user.</li>
+<li><strong>Email</strong>: (string) The email address of the user.</li>
+<li><strong>Password</strong>: (string) The password chosen by the user.</li>
+<li><strong>Age</strong>: (number) The age of the user.</li>
+<li><strong>Phone</strong>: (string) The phone number of the user.</li>
+<li><strong>Address</strong>: (string) The residential address of the user.</li>
+<li><strong>City</strong>: (string) The city of residence of the user.</li>
+<li><strong>Country</strong>: (string) The country of residence of the user.</li>
+<li><strong>Zip Code</strong>: (string) The postal code of the user's address.</li>
+<li><strong>Gender</strong>: (string) The gender of the user. Possible values are "male", "female", and "other".</li>
+<li><strong>Date of Birth</strong>: (string) The birth date of the user in YYYY-MM-DD format.</li>
+<li><strong>Occupation</strong>: (string) The occupation of the user.</li>
+<li><strong>Education</strong>: (string) The educational background of the user.</li>
+<li><strong>Interests</strong>: (string) The interests or hobbies of the user.</li>
+<li><strong>Username</strong>: (string) The chosen username of the user.</li>
+<li><strong>Website</strong>: (string) The personal website URL of the user.</li>
+<li><strong>Bio</strong>: (string) A short biography of the user.</li>
+<li><strong>Favorite Color</strong>: (string) The favorite color of the user, represented in a hex code.</li>
+<li><strong>Subscribe to Newsletter</strong>: (boolean) Indicates if the user wants to subscribe to the newsletter. Possible values are <code>true</code> or <code>false</code>.</li>
+<li><strong>Agree to Terms</strong>: (boolean) Indicates if the user agrees to the terms and conditions. Possible values are <code>true</code> or <code>false</code>.</li>
+</ul>
+<h3 id="Response-Format">Response Format<a class="anchor-link" href="#Response-Format">¶</a></h3><p>The response will be a JSON object indicating the success or failure of the request.</p>
+<h4 id="Success-Response">Success Response<a class="anchor-link" href="#Success-Response">¶</a></h4><ul>
+<li><strong>Status Code</strong>: 200 OK</li>
+<li><strong>Body</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User information submitted successfully."</span>
+<span class="p">}</span>
+</pre></div>
+<h4 id="Error-Response">Error Response<a class="anchor-link" href="#Error-Response">¶</a></h4><ul>
+<li><strong>Status Code</strong>: 400 Bad Request</li>
+<li><strong>Body</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid input data."</span>
+<span class="p">}</span>
+</pre></div>
+<h3 id="Example-Request">Example Request<a class="anchor-link" href="#Example-Request">¶</a></h3><div class="highlight"><pre><span></span><span class="nf">POST</span> <span class="nn">/api/submit_user_info</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
 
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.doe@example.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"securepassword123"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Age"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123-456-7890"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Main St"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Springfield"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Zip Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"male"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Date of Birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1990-01-01"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Engineer"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Education"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Master's Degree"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Interests"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reading, Hiking"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"johndoe"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://johndoe.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An engineer with a passion for technology."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Favorite Color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#0000ff"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Subscribe to Newsletter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Agree to Terms"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+<h3 id="Example-Response">Example Response<a class="anchor-link" href="#Example-Response">¶</a></h3><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User information submitted successfully."</span>
+<span class="p">}</span>
+</pre></div>
+<h3 id="Error-Handling">Error Handling<a class="anchor-link" href="#Error-Handling">¶</a></h3><p>If the request contains invalid data (e.g., missing required fields, incorrect data types), the server will respond with an appropriate error message and a 400 status code.</p>
+<p>Ensure all required fields are provided and are of the correct data type before making the request to avoid errors.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6275059e-37e5-46aa-91f5-377394caefcb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.doe@example.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+1234567890"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"addressLine1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Main St"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"addressLine2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apt 4B"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Metropolis"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10001"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"dateOfBirth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1990-01-01"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Male"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"profilePictureUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/profile.jpg"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Software developer and tech enthusiast."</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://johndoe.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"twitterHandle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@john_doe"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"linkedinProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://linkedin.com/in/johndoe"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"githubProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://github.com/johndoe"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"facebookProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://facebook.com/johndoe"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"instagramHandle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@johndoe"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Software Developer"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tech Corp"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span><span class="w"> </span><span class="s2">"JavaScript"</span><span class="p">,</span><span class="w"> </span><span class="s2">"React"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"hobbies"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Cycling"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Reading"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Traveling"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"timezone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"America/New_York"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"notificationPreferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"sms"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"push"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"subscriptionStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"accountType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Premium"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"membershipLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gold"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"pointsBalance"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"lastLogin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-05-01T12:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"accountCreated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-06-15T08:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"emailVerified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"phoneVerified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"twoFactorAuthEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"preferredLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"marketingOptIn"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"darkModeEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"sessionTimeout"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"privacySettings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"profileVisibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Public"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"searchEngineIndexing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"favoriteCategories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Technology"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Science"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Art"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"recentActivities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Logged in"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Updated profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Posted a comment"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Light"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medium"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"backupEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"backup@example.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"alternatePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+1098765432"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"emergencyContact"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sister"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+1987654321"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"addressHistory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"456 Old St"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gotham"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NJ"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07001"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"789 New Ave"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Star City"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CA"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90001"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"preferredContactMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"communicationPreferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"newsletter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"promotions"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"updates"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"profileCompletion"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"lastPasswordChange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-03-20T10:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"trustedDevices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"iPhone"</span><span class="p">,</span><span class="w"> </span><span class="s2">"MacBook"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"securityQuestions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What is your mother's maiden name?"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"question"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What was your first pet's name?"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buddy"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"recentOrders"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"orderDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-04-10"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Delivered"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">67890</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"orderDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-04-20"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shipped"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"wishList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Book 1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Gadget 2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Clothing Item 3"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"cartItems"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"itemId"</span><span class="p">:</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"itemName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Laptop"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">999.99</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"itemId"</span><span class="p">:</span><span class="w"> </span><span class="mi">222</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"itemName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Headphones"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">199.99</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"subscriptionRenewalDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-06-15"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"preferredPaymentMethod"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Credit Card"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"paymentMethods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Credit Card"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"expiryDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-01"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PayPal"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paypal@example.com"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"billingAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"addressLine1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Billing St"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"addressLine2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Suite 500"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Finance City"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TX"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"75001"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"shippingAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"addressLine1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"456 Shipping Ave"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"addressLine2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Warehouse 7"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logistics Town"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FL"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"33001"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USA"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"orderHistory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"orderId"</span><span class="p">:</span><span class="w"> </span><span class="mi">34567</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"orderDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-25"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"itemId"</span><span class="p">:</span><span class="w"> </span><span class="mi">333</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"itemName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tablet"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">499.99</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mf">499.99</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Delivered"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"subscriptionPlans"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Basic"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Premium"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Enterprise"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"discountCodes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"WELCOME10"</span><span class="p">,</span><span class="w"> </span><span class="s2">"SPRINGSALE"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"giftCards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GIFT2024"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">50.00</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"loyaltyProgram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"memberId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LP123456"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gold"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"points"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"appVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2.3"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"deviceInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"deviceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smartphone"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"os"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iOS"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"osVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14.4"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"supportTickets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"ticketId"</span><span class="p">:</span><span class="w"> </span><span class="mi">7890</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"issue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Login issue"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Resolved"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"favorites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Item 1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Item 2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Item 3"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"savedSearches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Search 1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Search 2"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"preferredDeliveryTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Morning"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"deliveryInstructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leave at the front door"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"surveyResponses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"surveyId"</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"answers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"feedback"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Great service!"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"productReviews"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"productId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2222</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"review"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Excellent product!"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"browserHistory"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Page 1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Page 2"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Message"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have a new message"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-05-15T14:00:00Z"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.7128</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-74.0060</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"activityLog"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"Logged in"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"Updated profile"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"Changed password"</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b1b1eae3-e14c-4248-832b-e5ffd8f42b11">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Filling-tools-metadata">Filling tools metadata<a class="anchor-link" href="#Filling-tools-metadata">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=87b8ea37-e98a-414e-bdc2-517bf4c74276">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7844,6 +7978,17 @@ a.anchor-link {
 <p>If only there was a way to automate away the metadata generation that also keeps up to date with the API changes.</p>
 <p>So I look into the web UI. My hypothesis is: Since the web UI is the primary way that a user interact with the service, it should already contain sufficient information describing what the API functionality is.</p>
 <p>the UI itself is an HTML string. Something like this:</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=17dc9c2d-e5df-47fb-b6e5-2a1d8e06483e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Example-HTML-Form">Example HTML Form<a class="anchor-link" href="#Example-HTML-Form">¶</a></h4>
 </div>
 </div>
 </div>
@@ -7987,36 +8132,319 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Each fields have a coresponding label. So I use an LLM to extract a JSON object from HTML string</p>
+<h1 id="Deriving-metadata-from-the-already-existing-source">Deriving metadata from the already existing source<a class="anchor-link" href="#Deriving-metadata-from-the-already-existing-source">¶</a></h1><p>Each fields have a coresponding label. So I use an LLM to extract a JSON object from HTML string</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=73e960db-bd1c-4f56-84e0-50711fd9dc28">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=73e960db-bd1c-4f56-84e0-50711fd9dc28">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">prompt</span> <span class="o">=</span> <span class="s2">"""</span>
-<span class="s2">Your task is to extract the data from the HTML form.</span>
-<span class="s2">Criteria for Success:</span>
-<span class="s2">Ensure each fields are populated correctly</span>
-<span class="s2">Respond in JSON</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"http://127.0.0.1:8080/form_example.html"</span>
+<span class="n">html_form</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">You're given the following HTML Form with several HTML &lt;input&gt; elements:</span>
+<span class="s2">---</span>
+<span class="s2">[HTML_FORM]</span>
+<span class="s2">---</span>
+<span class="s2">your task is to extract each &amp;lt;input&amp;gt; fields into a JSON object with each key equal to the label of each field. And the value is a dictionary containing:</span>
+<span class="s2">1. type - JSON Schema basic types,</span>
+<span class="s2">2. required - &lt;input&gt; has attribute "required",</span>
+<span class="s2">3. description</span>
+<span class="s2">For example, the following input field:</span>
+<span class="s2">---</span>
+<span class="s2">&lt;input type="text" required name="field1"/&gt;</span>
+<span class="s2">---</span>
+<span class="s2">should return this object:</span>
+<span class="s2">---</span>
+<span class="s2">{</span>
+<span class="s2">  "field1": {</span>
+<span class="s2">    "type": "string",</span>
+<span class="s2">    "required": False,</span>
+<span class="s2">    "description": "field1"</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+<span class="s2">---</span>
+<span class="s2">Respond only in JSON</span>
 <span class="s2">"""</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">prompt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'[HTML_FORM]'</span><span class="p">,</span> <span class="n">html_form</span><span class="p">)</span>
+
 <span class="n">completion</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
     <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">,</span>
-    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">"role"</span><span class="p">:</span> <span class="s2">"system"</span><span class="p">,</span>
-            <span class="s2">"content"</span><span class="p">:</span> <span class="s2">""</span>
-        <span class="p">},{</span>
-            <span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">content</span>
-        <span class="p">}]</span>
-    <span class="p">)</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">content</span>
+    <span class="p">}]</span>
+<span class="p">)</span>
+
+<span class="n">arguments</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">completion</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">arguments</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'Name': {'type': 'string', 'required': False, 'description': 'Name'},
+ 'Email': {'type': 'string', 'required': False, 'description': 'Email'},
+ 'Password': {'type': 'string', 'required': False, 'description': 'Password'},
+ 'Age': {'type': 'integer', 'required': False, 'description': 'Age'},
+ 'Phone': {'type': 'string', 'required': False, 'description': 'Phone'},
+ 'Address': {'type': 'string', 'required': False, 'description': 'Address'},
+ 'City': {'type': 'string', 'required': False, 'description': 'City'},
+ 'Country': {'type': 'string', 'required': False, 'description': 'Country'},
+ 'Zip Code': {'type': 'string', 'required': False, 'description': 'Zip Code'},
+ 'Gender': {'type': 'string', 'required': False, 'description': 'Gender'},
+ 'Date of Birth': {'type': 'string',
+  'required': False,
+  'description': 'Date of Birth'},
+ 'Occupation': {'type': 'string',
+  'required': False,
+  'description': 'Occupation'},
+ 'Education': {'type': 'string',
+  'required': False,
+  'description': 'Education'},
+ 'Interests': {'type': 'string',
+  'required': False,
+  'description': 'Interests'},
+ 'Username': {'type': 'string', 'required': False, 'description': 'Username'},
+ 'Website': {'type': 'string', 'required': False, 'description': 'Website'},
+ 'Bio': {'type': 'string', 'required': False, 'description': 'Bio'},
+ 'Favorite Color': {'type': 'string',
+  'required': False,
+  'description': 'Favorite Color'},
+ 'Subscribe to Newsletter': {'type': 'string',
+  'required': False,
+  'description': 'Subscribe to Newsletter'},
+ 'Agree to Terms': {'type': 'string',
+  'required': False,
+  'description': 'Agree to Terms'}}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5524c2b1-4fbf-4397-a854-c0aab3a4112c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>From this information, we can generate the <code>tools</code> object with the help of LLM</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7e9cbe3d-ce75-4742-9ef1-f0309a73d02a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">properties</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">required</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">arguments</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">property</span> <span class="o">=</span> <span class="n">arguments</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="n">properties</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"type"</span><span class="p">:</span> <span class="nb">property</span><span class="p">[</span><span class="s1">'type'</span><span class="p">],</span>
+        <span class="s2">"description"</span><span class="p">:</span> <span class="nb">property</span><span class="p">[</span><span class="s1">'description'</span><span class="p">]</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">property</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'required'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="n">required</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="n">required</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">required</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">required</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>{'Name': {'type': 'string', 'description': 'Name'}, 'Email': {'type': 'string', 'description': 'Email'}, 'Password': {'type': 'string', 'description': 'Password'}, 'Age': {'type': 'integer', 'description': 'Age'}, 'Phone': {'type': 'string', 'description': 'Phone'}, 'Address': {'type': 'string', 'description': 'Address'}, 'City': {'type': 'string', 'description': 'City'}, 'Country': {'type': 'string', 'description': 'Country'}, 'Zip Code': {'type': 'string', 'description': 'Zip Code'}, 'Gender': {'type': 'string', 'description': 'Gender'}, 'Date of Birth': {'type': 'string', 'description': 'Date of Birth'}, 'Occupation': {'type': 'string', 'description': 'Occupation'}, 'Education': {'type': 'string', 'description': 'Education'}, 'Interests': {'type': 'string', 'description': 'Interests'}, 'Username': {'type': 'string', 'description': 'Username'}, 'Website': {'type': 'string', 'description': 'Website'}, 'Bio': {'type': 'string', 'description': 'Bio'}, 'Favorite Color': {'type': 'string', 'description': 'Favorite Color'}, 'Subscribe to Newsletter': {'type': 'string', 'description': 'Subscribe to Newsletter'}, 'Agree to Terms': {'type': 'string', 'description': 'Agree to Terms'}}
+[]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c1f6fb40-2614-4956-b180-c736648f8419">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">tools</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"function"</span><span class="p">,</span>
+        <span class="s2">"function"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"submit_user_info"</span><span class="p">,</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"This endpoint accepts a JSON object containing user information collected from a form."</span><span class="p">,</span>
+            <span class="s2">"parameters"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"object"</span><span class="p">,</span>
+                <span class="s2">"properties"</span><span class="p">:</span> <span class="n">properties</span><span class="p">,</span>
+                <span class="s2">"required"</span><span class="p">:</span> <span class="n">required</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="n">tools</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[{'type': 'function',
+  'function': {'name': 'submit_user_info',
+   'description': 'This endpoint accepts a JSON object containing user information collected from a form.',
+   'parameters': {'type': 'object',
+    'properties': {'Name': {'type': 'string', 'description': 'Name'},
+     'Email': {'type': 'string', 'description': 'Email'},
+     'Password': {'type': 'string', 'description': 'Password'},
+     'Age': {'type': 'integer', 'description': 'Age'},
+     'Phone': {'type': 'string', 'description': 'Phone'},
+     'Address': {'type': 'string', 'description': 'Address'},
+     'City': {'type': 'string', 'description': 'City'},
+     'Country': {'type': 'string', 'description': 'Country'},
+     'Zip Code': {'type': 'string', 'description': 'Zip Code'},
+     'Gender': {'type': 'string', 'description': 'Gender'},
+     'Date of Birth': {'type': 'string', 'description': 'Date of Birth'},
+     'Occupation': {'type': 'string', 'description': 'Occupation'},
+     'Education': {'type': 'string', 'description': 'Education'},
+     'Interests': {'type': 'string', 'description': 'Interests'},
+     'Username': {'type': 'string', 'description': 'Username'},
+     'Website': {'type': 'string', 'description': 'Website'},
+     'Bio': {'type': 'string', 'description': 'Bio'},
+     'Favorite Color': {'type': 'string', 'description': 'Favorite Color'},
+     'Subscribe to Newsletter': {'type': 'string',
+      'description': 'Subscribe to Newsletter'},
+     'Agree to Terms': {'type': 'string', 'description': 'Agree to Terms'}},
+    'required': []}}}]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d6e438e0-5999-42b1-a60b-c75883310dee">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Finishing-Touch">Finishing Touch<a class="anchor-link" href="#Finishing-Touch">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=268c7db1-1825-455f-ac9a-06705ce92e50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Last step is to use this to accept user's natural text and invoke Function Calling</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5a699f85-88ee-438c-a08d-db777ece8765">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span>
+        <span class="s2">"role"</span><span class="p">:</span> <span class="s2">"system"</span><span class="p">,</span>
+        <span class="s2">"content"</span><span class="p">:</span> <span class="s2">"""</span>
+<span class="s2">        You have received a message containing various pieces of information. </span><span class="se">\</span>
+<span class="s2">        Your task is to extract the relevant data from the message and </span><span class="se">\</span>
+<span class="s2">        call the appropriate tool if necessary.</span>
+<span class="s2">        """</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span>
+        <span class="s2">"content"</span><span class="p">:</span> <span class="s2">"Hello, my name is Emily Rodriguez, and you can reach me at emily.rodriguez@email.com or (123) 456-7890. My mailing address is 123 Main Street, Anytown, USA. I identify as female, and I wholeheartedly accept the terms of service. Looking forward to engaging with you!"</span>
+    <span class="p">}],</span>
+    <span class="n">tools</span><span class="o">=</span><span class="n">tools</span><span class="p">,</span>
+    <span class="n">tool_choice</span><span class="o">=</span><span class="s2">"auto"</span>
+<span class="p">)</span>
+<span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>ChatCompletionMessage(content=None, role='assistant', function_call=None, tool_calls=[ChatCompletionMessageToolCall(id='call_znwdxoPwNk2h9asShFjSU30n', function=Function(arguments='{"Name": "Emily Rodriguez", "Email": "emily.rodriguez@email.com", "Phone": "(123) 456-7890", "Address": "123 Main Street", "City": "Anytown", "Country": "USA", "Gender": "female", "Agree to Terms": "true"}', name='submit_user_info'), type='function'), ChatCompletionMessageToolCall(id='call_ZzUJtpqb5R8QYrreJaXXneo8', function=Function(arguments='{"Subscribe to Newsletter": "true"}', name='submit_user_info'), type='function')])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0d878a2d-43f6-4224-a8e6-517abc91ebcf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee971649-c05a-4dd4-8a7a-a7f226b3e62c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>This guide should give some ideas into how we can leverage LLM with less efforts. There's still room for improvement. Feel free to use it to inspire your next project when working with LLM.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4903f3c2-f6b0-4d17-b78f-c1ef6f6c8cf6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>You can find the full source code here: [https://github.com/tholapz/automatic-guide-api.git]</p>
 </div>
 </div>
 </div>
