@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Leap Pottery
+published: true
+excerpt: Discover the transformative journey from hobbyist to skilled potter, exploring the techniques, challenges, and satisfaction found in the art of pottery.
+tags: [Computer Graphics, Bezier Curve, Rendering, CanvasJS, Javascript]
 ---
 
 Leap Pottery
