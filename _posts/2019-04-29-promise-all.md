@@ -1,9 +1,12 @@
 ---
 published: true
 layout: post
-excerpt: Learn how to efficiently execute multiple promises in parallel with JavaScript’s Promise.all, and explore strategies for effective error handling.
 tags: [JavaScript, Promise.all, Programming, Web Development, Asynchronous, Error Handling, Coding, JavaScript Promises, Parallel Execution, Best Practices]
 ---
+
+Learn how to efficiently execute multiple promises in parallel with JavaScript’s Promise.all, and explore strategies for effective error handling.
+
+
 ## Modifying the behavior of Promise.all()
 
 By now, as a JavaScript developer, you have probably used the Promise API at some point in your project. Promise offers a good alternative to using callbacks when dealing with asynchronous operations. Now, if you have a collection of promises you want all to be resolved and to aggregate the results in one promise, there’s Promise.all() and it works like this:
