@@ -6,7 +6,7 @@ tags: [Divemaster, Scuba Diving, Certification, Adventure, Marine Life, Training
 ---
 
 Join the journey of becoming a Divemaster, exploring the challenges, skills, and rewards of mastering the art of diving.
-
+<!--more-->
 # Introduction
 I'm a divemaster now. A PADI Divemaster, newly minted. I took a sabbatical to go to Thailand and decided to train to become a divemaster in December 2022. Most people think it’s a vacation but I'm not sure. I've been diving non-stop for two months. I would wake up at midnight most weekdays to attend virtual conference, work a bit. snack up from 7-11 and then attend some more meetings. Then around 5 am. I shower, pack my gear and head to the pier to board the morning boat. We usually do 2 dives in the morning and 2 dives in the afternoon. The boat comes back to dock and resupplies around 11 am. That’s the only time I have to get lunch before we’re heading out again to another dive site. Sometimes, we would do a night dive after 7 pm. Which means I won’t have a real meal until 9 pm. And after 1-2 hours of sleep, do it all again.
 
