@@ -196,3 +196,5 @@ jekyll-archives:
 
 plugins:
   - jekyll-gist
+
+excerpt_separator: <!--more-->
