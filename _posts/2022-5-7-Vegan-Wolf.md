@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vegan Wolf
-published: false
+published: true
 tags: [wolf, peace, inner-conflict, bitterness, poetry, haiku, emotions, nature, duality, transformation, haiku]
 ---
 
