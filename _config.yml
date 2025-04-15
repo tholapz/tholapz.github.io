@@ -225,4 +225,7 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
+plugins:
+  - "jekyll-gist"
+
   excerpt_separator: <!--more-->
