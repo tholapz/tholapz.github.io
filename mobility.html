@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Mobility & Tendon Care</title>
+  <meta name="description" content="Simple, step‑by‑step neck and heel care routine for gamers and multi‑sport athletes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --panel:#111827;       /* gray-900 */
+      --ink:#e5e7eb;         /* gray-200 */
+      --muted:#94a3b8;       /* slate-400 */
+      --brand:#22d3ee;       /* cyan-400 */
+      --accent:#38bdf8;      /* sky-400 */
+      --ok:#34d399;          /* emerald-400 */
+      --warn:#f59e0b;        /* amber-500 */
+      --danger:#f43f5e;      /* rose-500 */
+      --card:#0b1222;        /* custom dark */
+      --shadow: 0 10px 25px rgba(0,0,0,.25);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(34,211,238,.15), transparent 60%),
+                  radial-gradient(900px 500px at 120% 10%, rgba(56,189,248,.12), transparent 60%),
+                  var(--bg);
+      color:var(--ink); line-height:1.6;
+    }
+    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.8);backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid rgba(148,163,184,.15)}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:16px 24px}
+    .brand{display:flex; align-items:center; gap:14px}
+    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:var(--shadow)}
+    h1{font-size:clamp(22px,3vw,34px); margin:0}
+
+    .layout{display:grid; grid-template-columns: 260px 1fr; gap:24px; max-width:var(--maxw); margin:28px auto; padding:0 24px}
+    nav{position:sticky; top:76px; align-self:start; background:rgba(17,24,39,.6); border:1px solid rgba(148,163,184,.2); border-radius:var(--radius); padding:16px}
+    nav h3{margin:0 0 8px; font-size:14px; color:var(--muted); font-weight:600}
+    nav a{display:block; padding:8px 10px; margin:4px 0; color:var(--ink); text-decoration:none; border-radius:10px; transition:background .2s}
+    nav a:hover{background:rgba(34,211,238,.12)}
+
+    .card{background:linear-gradient(180deg, rgba(17,24,39,.8), rgba(11,18,34,.9)); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px}
+    .card h2{margin-top:0}
+    .meta{display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px}
+    .badge{padding:4px 10px; border-radius:999px; border:1px solid rgba(148,163,184,.25); background:rgba(148,163,184,.08)}
+
+    details{background:rgba(2,6,23,.45); border:1px solid rgba(148,163,184,.15); border-radius:var(--radius-sm); padding:14px 16px; margin:14px 0}
+    summary{cursor:pointer; font-weight:600}
+    details[open]{outline:1px solid rgba(56,189,248,.35)}
+
+    .step{background:rgba(148,163,184,.08); border:1px dashed rgba(148,163,184,.2); border-radius:12px; padding:12px 14px; margin:10px 0}
+    .subtle{color:var(--muted)}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+
+    .footer{max-width:var(--maxw); margin:40px auto; padding:16px 24px; color:var(--muted); border-top:1px solid rgba(148,163,184,.15)}
+
+    .cta{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{appearance:none; border:none; border-radius:12px; padding:10px 14px; font-weight:600; cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent)); color:#03111a}
+    .btn-ghost{background:transparent; color:var(--ink); border:1px solid rgba(148,163,184,.25)}
+
+    /* Print-friendly */
+    @media print{
+      header, nav, .cta {display:none !important}
+      body{background:#fff; color:#000}
+      .card{box-shadow:none; border:1px solid #ddd}
+      a{color:#000}
+    }
+
+    /* Mobile */
+    @media (max-width: 900px){
+      .layout{grid-template-columns: 1fr}
+      nav{position:static}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <div class="logo" aria-hidden="true"></div>
+      <h1>Daily Mobility & Tendon Care</h1>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav aria-label="On-page navigation">
+      <h3>Jump to</h3>
+      <a href="#overview">Overview</a>
+      <a href="#neck">Neck Routine</a>
+      <a href="#heel">Heel Routine</a>
+      <a href="#schedules">Daily Schedules</a>
+      <a href="#warnings">When to See a Doctor</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <section>
+      <article id="overview" class="card">
+        <h2>Overview</h2>
+        <p class="subtle">Built for long gaming hours and multi‑sport weeks (bouldering, golf, badminton, pickleball, swimming, running, diving). Plain‑English steps. Zero equipment beyond a band, a step, and a bottle.</p>
+        <div class="meta">
+          <span class="badge">Time: 20–30 min/day</span>
+          <span class="badge">Focus: Neck & Right Heel</span>
+          <span class="badge">Last updated: 14 Aug 2025</span>
+        </div>
+      </article>
+
+      <article id="neck" class="card">
+        <h2>Neck Pain & Stiffness — Simple Steps</h2>
+        <p class="subtle">Do these daily. Use the morning set and brief breaks during gaming. Finish with the evening set.</p>
+
+        <details open>
+          <summary>Chin Tucks</summary>
+          <div class="step">
+            <ol>
+              <li>Sit or stand tall, eyes forward.</li>
+              <li>Gently pull your chin straight back (make a soft double chin). Do not tilt up or down.</li>
+              <li>Hold 2–3 seconds, relax. Repeat <strong>10 reps × 2 sets</strong>.</li>
+            </ol>
+            <p class="subtle">Should feel a light stretch at the base of the skull and light work in the throat.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Levator Scapulae Stretch</summary>
+          <div class="step">
+            <ol>
+              <li>Sit tall. Place your <em>right</em> hand behind your back.</li>
+              <li>Turn head slightly left, then look down toward your left armpit.</li>
+              <li>Use your left hand to gently add a little pressure.</li>
+              <li>Hold <strong>20–30 sec</strong>, switch sides, repeat.</li>
+            </ol>
+            <p class="subtle">Deep stretch from side/back of neck into the shoulder blade.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Upper Trapezius Stretch</summary>
+          <div class="step">
+            <ol>
+              <li>Let your right arm hang by your side.</li>
+              <li>Tilt your head left (ear toward shoulder).</li>
+              <li>Use your left hand to gently pull a little farther.</li>
+              <li>Hold <strong>20 sec</strong>, switch sides.</li>
+            </ol>
+            <p class="subtle">Stretch along the top of shoulder and side of neck.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Seated Thoracic Extensions (over chair back)</summary>
+          <div class="step">
+            <ol>
+              <li>Sit on a chair whose back hits your mid‑back.</li>
+              <li>Hands behind head, elbows forward.</li>
+              <li>Lean back over the chair edge to open your chest, then return up.</li>
+              <li>Do <strong>8 slow reps</strong>.</li>
+            </ol>
+            <p class="subtle">Should feel opening in the upper/mid‑back.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Isometric Neck Holds</summary>
+          <div class="step">
+            <ol>
+              <li>Press your forehead into your palm for <strong>5 sec × 5 reps</strong> (head stays still).</li>
+              <li>Repeat with hand behind the head, then on each side.</li>
+            </ol>
+            <p class="subtle">Light work without neck movement — builds stability.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Side‑Lying “Open Book” Rotations</summary>
+          <div class="step">
+            <ol>
+              <li>Lie on your side, knees bent to hip level.</li>
+              <li>Arms straight out in front, palms together.</li>
+              <li>Open the top arm back, rotating your chest toward the ceiling; return.</li>
+              <li>Do <strong>8 reps/side</strong>.</li>
+            </ol>
+            <p class="subtle">Stretch across chest and rotation through the upper back.</p>
+          </div>
+        </details>
+      </article>
+
+      <article id="heel" class="card">
+        <h2>Right Heel Pain, Swelling — Simple Steps</h2>
+        <p class="subtle">Aim to reduce morning pain and remodel the tendon/fascia over weeks.</p>
+
+        <details open>
+          <summary>Plantar Fascia Toe Stretch (in bed)</summary>
+          <div class="step">
+            <ol>
+              <li>Sit up, cross the sore foot over the other leg.</li>
+              <li>Grab your toes and pull them gently toward your shin.</li>
+              <li>Hold <strong>30 sec × 3</strong>.</li>
+            </ol>
+            <p class="subtle">Stretch under the foot arch to ease first‑step pain.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Ankle Alphabet (in bed)</summary>
+          <div class="step">
+            <ol>
+              <li>With the leg relaxed, “draw” letters A–Z with your big toe in the air.</li>
+            </ol>
+            <p class="subtle">Gently moves all ankle directions before standing.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Eccentric Calf Raises (step)</summary>
+          <div class="step">
+            <ol>
+              <li>Stand on a step, heels hanging off. Hold a wall/rail.</li>
+              <li>Rise up on both toes.</li>
+              <li>Lower down slowly over <strong>3 sec using only the sore leg</strong>.</li>
+              <li>Use both feet to rise again. Do <strong>3 × 12</strong> (straight‑knee and bent‑knee versions).</li>
+            </ol>
+            <p class="subtle">Mild pulling in the calf/Achilles is okay; avoid sharp pain.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Plantar Fascia Ball Roll (cold)</summary>
+          <div class="step">
+            <ol>
+              <li>Sit and place a frozen water bottle or firm ball under the arch.</li>
+              <li>Roll from heel to toes for <strong>1–2 minutes</strong>.</li>
+            </ol>
+            <p class="subtle">Cold massage to tame swelling and soreness.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Calf Stretches — Soleus & Gastroc</summary>
+          <div class="grid">
+            <div class="step">
+              <h4 style="margin:.2rem 0">Soleus (bent knee)</h4>
+              <ol>
+                <li>Face a wall; sore foot back a little.</li>
+                <li>Bend both knees, keep the back heel down, lean forward.</li>
+                <li>Hold <strong>30 sec × 3</strong>.</li>
+              </ol>
+            </div>
+            <div class="step">
+              <h4 style="margin:.2rem 0">Gastroc (straight knee)</h4>
+              <ol>
+                <li>Same setup, but keep the back knee straight.</li>
+                <li>Lean forward until you feel a stretch higher in the calf.</li>
+                <li>Hold <strong>30 sec × 3</strong>.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Band Ankle Strength (all directions)</summary>
+          <div class="step">
+            <ol>
+              <li>Sit with a resistance band around your foot.</li>
+              <li>Pull the band <em>in</em>, <em>out</em>, <em>up</em>, and <em>down</em> slowly.</li>
+              <li>Do <strong>12 reps each direction × 2 sets</strong>.</li>
+            </ol>
+            <p class="subtle">Targets the small stabilizers around the heel and ankle.</p>
+          </div>
+        </details>
+      </article>
+
+      <article id="schedules" class="card">
+        <h2>Daily Schedules</h2>
+        <div class="grid">
+          <section class="step">
+            <h3>Morning (before getting out of bed)</h3>
+            <ul>
+              <li>Plantar Fascia Toe Stretch — 30 sec × 3</li>
+              <li>Ankle Alphabet — A to Z</li>
+              <li>Chin Tucks — 10 × 2</li>
+            </ul>
+          </section>
+          <section class="step">
+            <h3>Daytime / Gaming Breaks</h3>
+            <ul>
+              <li>Chin Tucks — 10 reps</li>
+              <li>Upper Trap Stretch — 20 sec/side</li>
+              <li>Levator Scap Stretch — 20–30 sec/side</li>
+            </ul>
+          </section>
+          <section class="step">
+            <h3>Training Block (or post‑warmup)</h3>
+            <ul>
+              <li>Eccentric Calf Raises — 3 × 12 (straight & bent knee)</li>
+              <li>Band Ankle Strength — 12 each direction × 2</li>
+            </ul>
+          </section>
+          <section class="step">
+            <h3>Evening (wind‑down)</h3>
+            <ul>
+              <li>Thoracic Extensions — 8 slow reps</li>
+              <li>Isometric Neck Holds — 5 sec × 5 each direction</li>
+              <li>Calf Stretches — Soleus & Gastroc, 30 sec × 3 each</li>
+              <li>Plantar Fascia Ball Roll — 1–2 min</li>
+            </ul>
+          </section>
+        </div>
+        <p class="subtle">Tip: On high‑impact days (running, court sports), reduce jumping volume and add one extra cold roll of the arch post‑session.</p>
+      </article>
+
+      <article id="warnings" class="card">
+        <h2>When to See a Doctor</h2>
+        <ul>
+          <li>Heel swelling doesn’t improve after 2–3 weeks of reduced impact and the routine above.</li>
+          <li>Sharp pain, sudden increase in pain, or inability to push off.</li>
+          <li>Numbness, tingling, or progressive weakness in the foot/leg.</li>
+        </ul>
+        <p class="subtle">A sports‑medicine evaluation can rule out partial tendon tear or bursitis and, if needed, guide imaging and progressive loading.</p>
+      </article>
+
+      <article id="faq" class="card">
+        <h2>FAQ</h2>
+        <details>
+          <summary>How hard should the exercises feel?</summary>
+          <p class="step">Mild to moderate tension is okay. Avoid sharp or stabbing pain. For the heel, slight discomfort during eccentrics is expected, but pain should settle within minutes after a set.</p>
+        </details>
+        <details>
+          <summary>How fast will this work?</summary>
+          <p class="step">For tendon and fascia issues, expect <strong>6–12 weeks</strong> for meaningful change if you’re consistent, while morning pain should start easing in 1–3 weeks.</p>
+        </details>
+        <details>
+          <summary>Can I keep training?</summary>
+          <p class="step">Yes, but avoid back‑to‑back impact days and reduce sprinting/jumping volume while swelling persists. Keep technique work and low‑impact conditioning.</p>
+        </details>
+      </article>
+
+      <section class="cta wrap" style="padding-left:0">
+        <button class="btn btn-primary" onclick="window.print()">Print One‑Page Guide</button>
+        <a class="btn btn-ghost" href="#overview">Back to top ↑</a>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built as a static site. Host on GitHub Pages by committing this <code>index.html</code> to the repository root or <code>/docs</code>.</p>
+    <p style="margin-top:6px">Evidence base: Alfredson H. (1998) eccentric calf protocol for Achilles tendinosis; Cleland JA. (2009) plantar heel pain management; and standard cervical mobility/strengthening practices.</p>
+  </footer>
+</body>
+</html>
