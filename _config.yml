@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Kamal Treewatchararat # the main title
+title: Kamol Treewatchararat # the main title
 
 tagline: A Personal Journal (Opinions are my own and not the views of my employer) # it will display as the sub-title
 
@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://www.tholapz.com"
 
 github:
   username: tholapz # change to your GitHub username
@@ -31,12 +31,12 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Kamal Treewatchararat
+  name: Kamol Treewatchararat
   email: kamol@treewatchararat.com
   links:
     # The first element serves as the copyright owner's link
-    - https://www.linkedin.com/in/kamol-treewatchararat-a0071812/
     - https://github.com/tholapz # change to your GitHub homepage
+    - https://www.linkedin.com/in/kamol-treewatchararat-a0071812/
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
 
@@ -55,7 +55,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-CP0TJEZM89
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
