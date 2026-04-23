@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Kamal Zhang # the main title
+title: Kamal Treewatchararat # the main title
 
 tagline: A Personal Journal (Opinions are my own and not the views of my employer) # it will display as the sub-title
 
@@ -28,21 +28,17 @@ url: ""
 github:
   username: tholapz # change to your GitHub username
 
-twitter:
-  username: tholapz # change to your Twitter username
-
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Kamal Zhang
-  email: example@domain.com # change to your email address
+  name: Kamal Treewatchararat
+  email: kamol@treewatchararat.com
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    - https://www.linkedin.com/in/kamol-treewatchararat-a0071812/
     - https://github.com/tholapz # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
 
 # Site Verification Settings
 webmaster_verifications:
